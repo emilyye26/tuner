@@ -261,10 +261,7 @@
 
 <?php
 //  connect to database 
-$servername = "localhost";
-$username = "uoo87t6cg9q6a";
-$password = "Webprogramming!";
-$dbname = "dbkkfhwoh96jgp";
+include "db_auth.php";
 
 // establish connection
 $conn = new mysqli($servername, $username, $password, $dbname);

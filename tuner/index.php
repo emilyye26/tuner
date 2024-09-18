@@ -240,10 +240,7 @@
     <div class="albums-container" id="topRatedSongsContainer">
 <?php
 // database connection
-$servername = "localhost";
-$username = "uoo87t6cg9q6a";
-$password = "Webprogramming!";
-$dbname = "dbkkfhwoh96jgp";
+include "db_auth.php";
 
 // create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
