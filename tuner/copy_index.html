@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tuner</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Add some basic styling for the search bar */
+        .search-bar {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .search-bar input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .search-bar button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #ff6600;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .featured-albums-container, .search-results-container {
+            overflow-x: auto;
+            white-space: nowrap;
+            padding-bottom: 20px;
+        }
+        .albums-container {
+            display: inline-block;
+            vertical-align: top;
+            white-space: normal;
+            margin-right: 10px;
+            width: 200px; /* Adjust width of each album container */
+            text-align: center; /* Center-align content within each album container */
+        }
+        .albums-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+<header>
+    <div class="container">
+        <h1>Tuner</h1>
+        <!-- Add the search bar with dropdown for search type -->
+        <div class="search-bar container">
+            <form id="searchForm">
+                <label for="searchType">Search Type:</label>
+                <select id="searchType" name="searchType">
+                    <option value="track">Song</option>
+                    <option value="album">Album</option>
+                    <option value="artist">Artist</option>
+                </select>
+                <label for="searchInput">Search:</label>
+                <input type="text" id="searchInput" name="searchInput" required>
+                <button type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</header>
+
+<!-- Display featured albums -->
+<section class="featured-albums">
+    <div class="container">
+        <h2>Featured Albums</h2>
+        <div id="featuredAlbumsContainer" class="featured-albums-container">
+            <!-- Featured albums will be dynamically added here -->
+        </div>
+    </div>
+</section>
+
+<!-- Display search results -->
+<section class="search-results">
+    <div class="container">
+        <h2>Search Results</h2>
+        <div id="searchResultsContainer" class="search-results-container">
+            <!-- Search results will be dynamically added here -->
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2024 Tuner. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+    function fetchFeaturedAlbums() {
+        const tag = 'new'; // Use a relevant tag for new or recent releases
+        const apiKey = 'd6d301e46d6fbb9e3c5fefcbcaab2687'; // Replace with your Last.fm API key
+
+        console.log('Fetching featured albums...');
+        fetch(`https://ws.audioscrobbler.com/2.0/?method=tag.gettopalbums&tag=${tag}&api_key=${apiKey}&format=json`)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log('Received featured albums:', data);
+                const featuredAlbumsContainer = document.getElementById('featuredAlbumsContainer');
+                featuredAlbumsContainer.innerHTML = ''; // Clear previous results
+
+                if (data.albums && data.albums.album && data.albums.album.length > 0) {
+                    data.albums.album.forEach(album => {
+                        const albumElement = createAlbumElement(album);
+                        featuredAlbumsContainer.appendChild(albumElement);
+                    });
+                } else {
+                    console.warn('No featured albums found:', data);
+                    featuredAlbumsContainer.innerHTML = '<p>No featured albums found.</p>';
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching featured albums:', error);
+                const featuredAlbumsContainer = document.getElementById('featuredAlbumsContainer');
+                featuredAlbumsContainer.innerHTML = '<p>Failed to fetch data. Please try again later.</p>';
+            });
+    }
+
+function createAlbumElement(album) {
+    const albumElement = document.createElement('div');
+    albumElement.classList.add('albums-container');
+
+    const imageUrl = album.image && album.image[2] && album.image[2]['#text'];
+    const artistName = getArtistName(album);
+
+    albumElement.innerHTML = `
+        <a href="#">
+            <img src="${imageUrl}" alt="${album.name} Album Art">
+            <p><strong>${album.name}</strong> by ${artistName}</p>
+        </a>
+    `;
+
+    return albumElement;
+}
+
+function getArtistName(album) {
+    if (album.artist) {
+        if (typeof album.artist === 'string') {
+            return album.artist; // Handle case where artist is a string
+        } else if (album.artist.name) {
+            return album.artist.name; // Retrieve artist name if available
+        }
+    }
+    return 'Unknown Artist'; // Default to 'Unknown Artist' if artist name is not provided
+}
+
+
+
+    function fetchSearchResults(searchType, query) {
+        const apiKey = 'd6d301e46d6fbb9e3c5fefcbcaab2687'; // Replace with your Last.fm API key
+        let method = '';
+
+        switch (searchType) {
+            case 'track':
+                method = 'track.search';
+                break;
+            case 'album':
+                method = 'album.search';
+                break;
+            case 'artist':
+                method = 'artist.search';
+                break;
+            default:
+                return; // Invalid search type
+        }
+
+        const apiUrl = `https://ws.audioscrobbler.com/2.0/?method=${method}&${searchType}=${encodeURIComponent(query)}&api_key=${apiKey}&format=json`;
+
+        const searchResultsContainer = document.getElementById('searchResultsContainer');
+        searchResultsContainer.innerHTML = ''; // Clear previous results
+
+        fetch(apiUrl)
+            .then(response => response.json())
+            .then(data => {
+                if (data.results) {
+                    const searchResults = data.results[`${searchType}matches`][searchType];
+                    if (searchResults && searchResults.length > 0) {
+                        searchResults.forEach(result => {
+                            let resultElement;
+                            if (searchType === 'track') {
+                                resultElement = createTrackElement(result);
+                            } else if (searchType === 'album') {
+                                resultElement = createAlbumElement(result);
+                            } else if (searchType === 'artist') {
+                                resultElement = createArtistElement(result);
+                            }
+                            searchResultsContainer.appendChild(resultElement);
+                        });
+                    } else {
+                        searchResultsContainer.innerHTML = `<p>No ${searchType}s found for "${query}".</p>`;
+                    }
+                } else {
+                    searchResultsContainer.innerHTML = `<p>No ${searchType}s found for "${query}".</p>`;
+                }
+            })
+            .catch(error => {
+                console.error(`Error fetching ${searchType} search data:`, error);
+                searchResultsContainer.innerHTML = '<p>Failed to fetch data. Please try again later.</p>';
+            });
+    }
+
+    function createTrackElement(track) {
+        const trackElement = document.createElement('div');
+        trackElement.classList.add('albums-container');
+
+        trackElement.innerHTML = `
+            <a href="#">
+                <p><strong>${track.name}</strong> by ${track.artist}</p>
+            </a>
+        `;
+
+        return trackElement;
+    }
+
+    function createArtistElement(artist) {
+        const artistElement = document.createElement('div');
+        artistElement.classList.add('albums-container');
+
+        artistElement.innerHTML = `
+            <a href="#">
+                <p><strong>${artist.name}</strong></p>
+            </a>
+        `;
+
+        return artistElement;
+    }
+
+    // Fetch featured albums on page load
+    window.onload = function() {
+        fetchFeaturedAlbums();
+    };
+
+    // Handle form submission for search
+    document.getElementById('searchForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form submission
+
+        const searchType = document.getElementById('searchType').value;
+        const query = document.getElementById('searchInput').value.trim();
+
+        if (query !== '') {
+            fetchSearchResults(searchType, query);
+        }
+    });
+</script>
+
+</body>
+</html>

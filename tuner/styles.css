@@ -1,0 +1,162 @@
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        background-color: #f8f8f8;
+    }
+
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 30px 0; /* Increased top padding */
+        text-align: center;
+        position: relative; /* Added relative positioning */
+    }
+
+
+    .logo-container {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 20px;
+        float: left;
+        margin-right: auto;
+        position: absolute; /* Position the logo absolutely */
+        left: 50px; /* Align the logo to the left */
+        top: 50%; /* Align vertically in the middle */
+        transform: translateY(-50%); /* Adjust vertical positioning */
+    }
+
+    .logo-container img {
+        width: auto;
+        height: 70px; /* Increased height of the logo */
+        vertical-align: middle;
+    }
+
+    h1 {
+        display: inline-block;
+        font-size: 40px;
+        margin: 0;
+        vertical-align: middle;
+    }
+
+    .user-links {
+        display: inline-block;
+        vertical-align: middle;
+        float: right;
+        font-size: 17px;
+        margin-left: auto;
+        position: absolute; /* Position the user links absolutely */
+        right: 40px; /* Align the user links to the right */
+        top: 50%; /* Align vertically in the middle */
+        transform: translateY(-50%);
+    }
+
+
+.user-links a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 10px;
+    display: inline-block;
+    padding: 10px 20px; /* Add padding to make it look like a button */
+    background-color: #5e88d6; /* Blue color */
+    border-radius: 5px; /* Add rounded corners */
+    transition: background-color 0.3s ease; /* Add transition for smooth hover effect */
+}
+
+.user-links a:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+    /* Navigation styles */
+    nav {
+        background-color: #808080;
+        padding: 10px;
+        text-align: center;
+    }
+
+    nav form {
+        display: inline-block;
+    }
+
+    nav input[type="text"] {
+        padding: 8px;
+        border-radius: 5px;
+        border: none;
+        background-color: #fff;
+        margin-right: 5px;
+    }
+
+    nav button {
+        padding: 8px 15px;
+        border: none;
+        background-color: #5e88d6;
+        color: #fff;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    nav button:hover {
+        background-color: #0056b3;
+    }
+
+    nav a {
+        color: #fff;
+        text-decoration: none;
+        margin-right: 20px;
+    }
+
+    label {
+        margin-right: 5px;
+        color: #fff;
+    }
+
+    /* Main content styles */
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 15px;
+    }
+
+    .featured-songs {
+        background-color: #fff;
+        padding: 20px;
+        margin-top: 20px;
+        overflow-x: auto;
+        white-space: nowrap;
+        padding-bottom: 20px;
+    }
+
+    .albums-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .albums-container a {
+        color: #333;
+        text-decoration: none;
+        vertical-align: top;
+        white-space: normal;
+        margin-right: 10px;
+        width: 200px;
+        text-align: center;
+    }
+
+    .albums-container img {
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+        border-radius: 8px;
+        margin-bottom: 10px;
+    }
+
+    /* Footer styles */
+    footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        margin-top: 20px;
+    }

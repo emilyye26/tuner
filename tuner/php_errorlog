@@ -1,0 +1,87 @@
+[22-Apr-2024 23:53:34 UTC] PHP Parse error:  syntax error, unexpected '$SESSION' (T_VARIABLE), expecting ';' or ',' in /home/customer/www/benjaminl.sgedu.site/public_html/cs20_final/index.php on line 65
+[24-Apr-2024 01:29:23 UTC] PHP Parse error:  syntax error, unexpected '$user_id' (T_VARIABLE) in /home/customer/www/benjaminl.sgedu.site/public_html/cs20_final/song.php on line 107
+[24-Apr-2024 01:31:45 UTC] PHP Fatal error:  Uncaught Error: Object of class mysqli_result could not be converted to string in /home/customer/www/benjaminl.sgedu.site/public_html/cs20_final/song.php:116
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/benjaminl.sgedu.site/public_html/cs20_final/song.php on line 116
+[25-Apr-2024 22:50:55 UTC] PHP Parse error:  syntax error, unexpected 'href' (T_STRING), expecting ';' or ',' in /home/customer/www/benjaminl.sgedu.site/public_html/cs20_final/index.php on line 67
+[25-Apr-2024 22:51:25 UTC] PHP Parse error:  syntax error, unexpected 'href' (T_STRING), expecting ';' or ',' in /home/customer/www/benjaminl.sgedu.site/public_html/cs20_final/index.php on line 67
+[28-Apr-2024 21:12:57 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function alert() in /home/customer/www/benjaminl.sgedu.site/public_html/cs20_final/signin.php:29
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/benjaminl.sgedu.site/public_html/cs20_final/signin.php on line 29
+[28-Apr-2024 22:17:30 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function alert() in /home/customer/www/benjaminl.sgedu.site/public_html/cs20_final/signin.php:29
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/benjaminl.sgedu.site/public_html/cs20_final/signin.php on line 29
+[29-Apr-2024 20:25:37 UTC] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting '-' or identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/customer/www/benjaminl.sgedu.site/public_html/cs20_final/add_rating.php on line 42
+[29-Apr-2024 20:25:49 UTC] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting '-' or identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/customer/www/benjaminl.sgedu.site/public_html/cs20_final/add_rating.php on line 42
+[29-Apr-2024 20:26:18 UTC] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting '-' or identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/customer/www/benjaminl.sgedu.site/public_html/cs20_final/add_rating.php on line 42
+[29-Apr-2024 20:35:45 UTC] PHP Parse error:  syntax error, unexpected '<', expecting end of file in /home/customer/www/benjaminl.sgedu.site/public_html/cs20_final/index.php on line 214
+[29-Apr-2024 21:06:23 UTC] PHP Parse error:  syntax error, unexpected '" alt='Song Image' id='songIma' (T_CONSTANT_ENCAPSED_STRING), expecting ';' or ',' in /home/customer/www/benjaminl.sgedu.site/public_html/cs20_final/library.php on line 279
+[29-Apr-2024 21:12:57 UTC] PHP Parse error:  syntax error, unexpected '" alt='Song Image' id='songIma' (T_CONSTANT_ENCAPSED_STRING), expecting ';' or ',' in /home/customer/www/benjaminl.sgedu.site/public_html/cs20_final/library.php on line 279
+[29-Apr-2024 21:16:15 UTC] PHP Parse error:  syntax error, unexpected '" id='songImage' width=300px>"' (T_CONSTANT_ENCAPSED_STRING), expecting ';' or ',' in /home/customer/www/benjaminl.sgedu.site/public_html/cs20_final/library.php on line 279
+[29-Apr-2024 21:17:30 UTC] PHP Parse error:  syntax error, unexpected '" id='songImage' width=300px>"' (T_CONSTANT_ENCAPSED_STRING), expecting ';' or ',' in /home/customer/www/benjaminl.sgedu.site/public_html/cs20_final/library.php on line 279
+[29-Apr-2024 21:17:40 UTC] PHP Parse error:  syntax error, unexpected '" id='songImage' width=300px>"' (T_CONSTANT_ENCAPSED_STRING), expecting ';' or ',' in /home/customer/www/benjaminl.sgedu.site/public_html/cs20_final/library.php on line 279
+[29-Apr-2024 23:50:19 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function encodeURIComponent() in /home/customer/www/benjaminl.sgedu.site/public_html/cs20_final/index.php:242
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/benjaminl.sgedu.site/public_html/cs20_final/index.php on line 242
+[29-Apr-2024 23:50:21 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function encodeURIComponent() in /home/customer/www/benjaminl.sgedu.site/public_html/cs20_final/index.php:242
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/benjaminl.sgedu.site/public_html/cs20_final/index.php on line 242
+[29-Apr-2024 23:50:22 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function encodeURIComponent() in /home/customer/www/benjaminl.sgedu.site/public_html/cs20_final/index.php:242
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/benjaminl.sgedu.site/public_html/cs20_final/index.php on line 242
+[29-Apr-2024 23:50:23 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function encodeURIComponent() in /home/customer/www/benjaminl.sgedu.site/public_html/cs20_final/index.php:242
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/benjaminl.sgedu.site/public_html/cs20_final/index.php on line 242
+[29-Apr-2024 23:50:25 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function encodeURIComponent() in /home/customer/www/benjaminl.sgedu.site/public_html/cs20_final/index.php:242
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/benjaminl.sgedu.site/public_html/cs20_final/index.php on line 242
+[29-Apr-2024 23:50:32 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function encodeURIComponent() in /home/customer/www/benjaminl.sgedu.site/public_html/cs20_final/index.php:242
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/benjaminl.sgedu.site/public_html/cs20_final/index.php on line 242
+[29-Apr-2024 23:51:04 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function encodeURIComponent() in /home/customer/www/benjaminl.sgedu.site/public_html/cs20_final/index.php:242
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/benjaminl.sgedu.site/public_html/cs20_final/index.php on line 242
+[29-Apr-2024 23:51:15 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function encodeURIComponent() in /home/customer/www/benjaminl.sgedu.site/public_html/cs20_final/index.php:242
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/benjaminl.sgedu.site/public_html/cs20_final/index.php on line 242
+[29-Apr-2024 23:51:16 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function encodeURIComponent() in /home/customer/www/benjaminl.sgedu.site/public_html/cs20_final/index.php:242
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/benjaminl.sgedu.site/public_html/cs20_final/index.php on line 242
+[29-Apr-2024 23:51:19 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function encodeURIComponent() in /home/customer/www/benjaminl.sgedu.site/public_html/cs20_final/index.php:242
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/benjaminl.sgedu.site/public_html/cs20_final/index.php on line 242
+[29-Apr-2024 23:51:23 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function encodeURIComponent() in /home/customer/www/benjaminl.sgedu.site/public_html/cs20_final/index.php:242
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/benjaminl.sgedu.site/public_html/cs20_final/index.php on line 242
+[29-Apr-2024 23:51:29 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function encodeURIComponent() in /home/customer/www/benjaminl.sgedu.site/public_html/cs20_final/index.php:242
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/benjaminl.sgedu.site/public_html/cs20_final/index.php on line 242
+[30-Apr-2024 00:02:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function encodeURIComponent() in /home/customer/www/benjaminl.sgedu.site/public_html/cs20_final/index.php:242
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/benjaminl.sgedu.site/public_html/cs20_final/index.php on line 242
+[17-Aug-2024 23:15:19 CST6CDT] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Amour De Ma Vie' AND user_id = ''' at line 1 in /home/customer/www/benjaminl.sgedu.site/public_html/cs20_final/song.php:467
+Stack trace:
+#0 /home/customer/www/benjaminl.sgedu.site/public_html/cs20_final/song.php(467): mysqli->query('SELECT * FROM S...')
+#1 {main}
+  thrown in /home/customer/www/benjaminl.sgedu.site/public_html/cs20_final/song.php on line 467
+[17-Aug-2024 23:30:53 CST6CDT] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Amour De Ma Vie' AND user_id = '10'' at line 1 in /home/customer/www/benjaminl.sgedu.site/public_html/tuner/song.php:467
+Stack trace:
+#0 /home/customer/www/benjaminl.sgedu.site/public_html/tuner/song.php(467): mysqli->query('SELECT * FROM S...')
+#1 {main}
+  thrown in /home/customer/www/benjaminl.sgedu.site/public_html/tuner/song.php on line 467

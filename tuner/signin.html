@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+        <link rel="icon" href="icon.png" type="image/icon type">
+    <style>
+               body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        background-color: #f8f8f8;
+    }
+
+            header {
+        background-color: #333;
+        color: #fff;
+        padding: 30px 0; /* Increased top padding */
+        text-align: center;
+        position: relative; /* Added relative positioning */
+    }
+
+
+    .logo-container {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 20px;
+        float: left;
+        margin-right: auto;
+        position: absolute; /* Position the logo absolutely */
+        left: 50px; /* Align the logo to the left */
+        top: 50%; /* Align vertically in the middle */
+        transform: translateY(-50%); /* Adjust vertical positioning */
+    }
+
+    .logo-container img {
+        width: auto;
+        height: 70px; /* Increased height of the logo */
+        vertical-align: middle;
+    }
+
+    /* Main content styles */
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 15px;
+    }
+        form {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #5e88d6;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .signup-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <div class="logo-container">
+            <a href="index.php"> <!-- Replace "homepage.php" with the actual URL of your homepage -->
+                <img src="logo.png" alt="Logo">
+            </a>
+        </div>
+    </div>
+</header>
+
+<form action="signin.php" method="post">
+    <label for="Username">Username:</label>
+    <input type="text" name="Username" id="Username" required>
+
+    <label for="Password">Password:</label>
+    <input type="password" name="Password" id="Password" required>
+    
+    <button type="submit">Sign In</button>
+</form>
+
+<p class="signup-link">Don't have an account? <a href="signup.html">Sign up here.</a></p>
+
+</body>
+</html>
