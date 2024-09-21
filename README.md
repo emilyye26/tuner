@@ -11,4 +11,4 @@ Tuner is a social music rating platform that allows users to browse through musi
 - Last.FM Integration: Retrieve song and music chart data from the Last.FM API.
 
 ## Tech stack
-We built the front-end with HTML, CSS and Javascript. We utilized a SQL database and PHP to store user data and song ratings. We retrieved song and music chart datafrom the Last.FM API.
+We built the frontend with HTML, CSS and Javascript. We utilized a SQL database and PHP to store user data and song ratings in the backend. We retrieved song and music chart data by integrating the Last.FM API.
